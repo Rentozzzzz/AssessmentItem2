@@ -131,7 +131,6 @@ svg{
     border-collapse: collapse;
     background: rgba(255, 255, 255, 0.2); /* Light translucent background */
     backdrop-filter: blur(10px); /* Applies blur effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
