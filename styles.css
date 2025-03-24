@@ -1,0 +1,124 @@
+/* External CSS */
+:root{
+    --base-clr: url('blackhole.jpg');
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #f5f5f5;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--base-clr);
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: var(--text-clr);
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.container {
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    margin-bottom: 20px;
+    padding: min(3em, 15%);
+    background: rgba(128, 128, 128, 0.3); /* Lighter translucency */
+    backdrop-filter: blur(10px); /* Adds a blurry glass effect */
+
+    h2, p {margin-top: 1em}
+
+}
+section {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+footer {
+    background-color: #111111;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#sidebar{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 200px;
+    padding: 5px 1em;
+    background-color: var(--base-clr);
+    border-right: 1px solid var(--line-clr);
+
+    position: sticky;
+    top: 0;
+    align-self: start;
+    transition: 300ms ease-in-out;
+
+    overflow: hidden; /*to fully close the sidebar */
+    text-wrap: nowrap;
+}
+svg {
+    width: 25px;
+    height: 30px;
+  }
+#sidebar.close{
+    padding: 5px;
+    width: 60px;
+}
+#sidebar ul{
+    list-style: none;
+}
+#sidebar > ul > li:first-child{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    .logo{
+        font-weight: 600;
+    }
+}
+#sidebar ul li.active a{
+    color: var(--accent-clr);
+
+    svg{
+        fill: var(--accent-clr);
+    }
+}
+#sidebar a, #sidebar .logo{
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    color: var(--text-clr);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+}
+#sidebar svg{
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+#sidebar a:hover{
+    background-color: var(--hover-clr);
+}
+#toggle-btn{
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+
+    svg{
+        transition: rotate 150ms ease;
+    }
+}
+#toggle-btn:hover{
+    background-color: var(--hover-clr);
+}
