@@ -122,3 +122,18 @@ svg {
 #toggle-btn:hover{
     background-color: var(--hover-clr);
 }
+.blurred-table {
+    width: 50%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.2); /* Light translucent background */
+    backdrop-filter: blur(10px); /* Applies blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.blurred-table th, .blurred-table td {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: #f5f5f5;
+}
